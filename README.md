@@ -24,6 +24,71 @@ This repository contains a single Open WebUI pipeline:
 3. **Create images** via OpenAI-compatible image generation endpoint.
 4. **Store results** locally or on S3/MinIO and return a gallery.
 
+---
+
+## Example — Urban Alley + Space Cat (demo)
+
+This example demonstrates how the pipeline combines two very different images into a single photorealistic composite. The inputs used for this example are in `static/examples/` and the generated result is shown below.
+
+**Input images**
+
+- **Image 1** (`static/examples/image1.png`): dimly lit urban alley, wet pavement, muted/dark palette with pops of red and green.  
+- **Image 2** (`static/examples/image2.jpg`): a vibrant orange cat in a space suit floating in space, highly detailed textures and bright colors.
+
+**User prompt (as provided)**
+
+> blend this both images
+
+**Filter / Vision extraction result (example)**
+
+Image 1 traits: **Image Summary**
+
+This image captures a dimly lit alleyway in a densely populated urban area, characterized by a predominantly dark color palette with subtle pops of red and green.
+
+**Foreground and Background**
+The alleyway is flanked by two-story buildings, with the nearest building on the left featuring a partially visible sign and a door, while the building on the right has a door with a red sign above it. The alleyway is paved with a dark, wet surface, likely due to recent rainfall. In the distance, a car can be seen driving away from the camera.
+
+**Context and Location**
+The image appears to be set in a densely populated urban area, with the alleyway serving as a narrow passageway between the two buildings. The presence of a car in the distance suggests that the alleyway is part of a larger network of streets and roads.
+
+**Mood and Atmosphere**
+The dimly lit alleyway creates a sense of mystery and intrigue, while the presence of a car in the distance adds a sense of activity and movement to the scene. The overall mood of the image is one of urban grittiness and intensity.
+
+---
+
+Image 2 traits: **Cat in space (summary)**
+
+The image features a cat dressed in a space suit, floating in space. The cat's fur is a vibrant orange color with white patches on its face, chest, and paws. Its eyes are large and round, with a curious expression. The cat's mouth is slightly open, revealing its pink tongue.
+
+The cat's space suit is a metallic gray color with a distinctive red, green, and blue pattern on the chest. The suit has a large, round helmet with a clear visor, and a small, round backpack on its back. The cat's tail is long and fluffy, with a few strands of fur sticking out of the suit's back.
+
+The background of the image is a deep, dark blue, with a few stars and planets visible in the distance. The overall effect is one of wonder and curiosity, as if the cat is exploring the vastness of space. The image is rendered in a highly detailed, realistic style, with a focus on texture and color. The cat's fur and the space suit's materials are both highly detailed, giving the image a sense of depth and realism. The use of bright, vibrant colors adds to the sense of wonder and curiosity, making the image feel both fun and exciting.
+
+---
+
+**Generation prompt used (constructed by the pipeline)**
+
+```
+Photorealistic RAW image of the subject. Composite of attributes from both input images.
+Image 1 traits: **Image Summary**
+Image 2 traits: **Cat in space (summary)**
+Combine colors, textures, shapes, and composition elements naturally. Preserve realistic materials, proportions, and lighting appropriate to the subject and scene. Neutral background unless the scene suggests otherwise, natural lighting, accurate depth of field, and subtle film grain for realism. Avoid CGI, 3D renderings, illustrations, or obviously synthetic artifacts.
+User preferences: blend this both images
+```
+
+**Models used**
+
+- Vision extraction: `llama3.2-vision:latest` (Ollama vision model)
+- Image generation: `x/flux2-klein:latest` (Ollama image-generation model via the experimental `/v1/images/generations` endpoint)
+
+**Result**
+
+The generated composite demonstrates a fusion of the alleyway's mood and materials with the cat-in-space subject: colors and textures are blended while attempting to preserve realistic lighting and depth. The resulting image is saved at `static/examples/result.png` and displayed below.
+
+![Result composite](static/examples/result.png)
+
+---
+
 ## Requirements
 
 - Open WebUI Pipelines container
