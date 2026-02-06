@@ -37,6 +37,11 @@ The resulting composite is uploaded to the configured S3/MinIO bucket (if `use_s
 - **Image 1** (`docs/img/image1.png`): dimly lit urban alley, wet pavement, muted/dark palette with pops of red and green.  
 - **Image 2** (`docs/img/image2.jpg`): a vibrant orange cat in a space suit floating in space, highly detailed textures and bright colors.
 
+**Preview (local images)**
+
+![Image 1](docs/img/image1.png) ![Image 2](docs/img/image2.jpg)
+
+
 **User prompt (as provided)**
 
 > blend this both images
@@ -85,7 +90,9 @@ User preferences: blend this both images
 
 **Result**
 
-The generated composite demonstrates a fusion of the alleyway's mood and materials with the cat-in-space subject: colors and textures are blended while attempting to preserve realistic lighting and depth. The generated composite was uploaded to the pipeline's configured S3/MinIO location (see `s3_public_url` in `valves.json`) and therefore is not committed to this repository. To preview a locally-generated result, run the static server or copy the file into `static/morphs/` and reload the gallery.
+The generated composite demonstrates a fusion of the alleyway's mood and materials with the cat-in-space subject: colors and textures are blended while attempting to preserve realistic lighting and depth. The generated composite was uploaded to the pipeline's configured S3/MinIO location (see `s3_public_url` in `valves.json`). A local copy of the demo result is included in this repository at `docs/img/result.png` and is displayed below.
+
+![Result composite](docs/img/result.png)
 
 ---
 
