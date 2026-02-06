@@ -28,12 +28,12 @@ This repository contains a single Open WebUI pipeline:
 
 ## Example — Urban Alley + Space Cat (demo)
 
-This example demonstrates how the pipeline combines two very different images into a single photorealistic composite. The inputs used for this example are in `static/examples/` and the generated result is shown below.
+This example demonstrates how the pipeline combines two very different images into a single photorealistic composite. The inputs used for this example are in `doss/img/` and the generated result is shown below.
 
 **Input images**
 
-- **Image 1** (`static/examples/image1.png`): dimly lit urban alley, wet pavement, muted/dark palette with pops of red and green.  
-- **Image 2** (`static/examples/image2.jpg`): a vibrant orange cat in a space suit floating in space, highly detailed textures and bright colors.
+- **Image 1** (`doss/img/image1.png`): dimly lit urban alley, wet pavement, muted/dark palette with pops of red and green.  
+- **Image 2** (`doss/img/image2.jpg`): a vibrant orange cat in a space suit floating in space, highly detailed textures and bright colors.
 
 **User prompt (as provided)**
 
@@ -83,9 +83,9 @@ User preferences: blend this both images
 
 **Result**
 
-The generated composite demonstrates a fusion of the alleyway's mood and materials with the cat-in-space subject: colors and textures are blended while attempting to preserve realistic lighting and depth. The resulting image is saved at `static/examples/result.png` and displayed below.
+The generated composite demonstrates a fusion of the alleyway's mood and materials with the cat-in-space subject: colors and textures are blended while attempting to preserve realistic lighting and depth. The resulting image is saved at `doss/img/result.png` and displayed below.
 
-![Result composite](static/examples/result.png)
+![Result composite](doss/img/result.png)
 
 ---
 
