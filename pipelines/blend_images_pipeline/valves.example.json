@@ -1,0 +1,15 @@
+{
+  "vision_url": "http://10.10.20.197:11434",
+  "vision_model": "llama3.2-vision:latest",
+  "gen_url": "http://10.10.20.140:11434",
+  "gen_model": "x/flux2-klein:latest",
+  "gen_n": 6,
+  "gen_size": "1024x1024",
+  "gen_response_format": "b64_json",
+  "use_s3": true,
+  "s3_endpoint": "https://minio.example.com:9000",
+  "s3_bucket": "morphs",
+  "s3_access_key": "<REDACTED_S3_ACCESS_KEY>",
+  "s3_secret_key": "<REDACTED_S3_SECRET_KEY>",
+  "s3_public_url": "https://minio.example.com:9000/morphs"
+}
