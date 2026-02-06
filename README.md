@@ -28,14 +28,14 @@ This repository contains a single Open WebUI pipeline:
 
 ## Example — Urban Alley + Space Cat (demo)
 
-This example demonstrates how the pipeline combines two very different images into a single photorealistic composite. The input images for this demo were used locally (see `doss/img/` on the developer machine) and are **NOT** checked into this repository.
+This example demonstrates how the pipeline combines two very different images into a single photorealistic composite. The input images for this demo were used locally (see `docs/img/` on the developer machine) and are **NOT** checked into this repository.
 
 The resulting composite is uploaded to the configured S3/MinIO bucket (if `use_s3` is enabled). In this example the result was stored in the pipeline's S3 location; replace `s3_public_url` in your valves configuration to preview results publicly. To preview the example images locally, run the included static server (`python3 static_server.py`) or place files under `static/morphs/`.
 
 **Input images**
 
-- **Image 1** (`doss/img/image1.png`): dimly lit urban alley, wet pavement, muted/dark palette with pops of red and green.  
-- **Image 2** (`doss/img/image2.jpg`): a vibrant orange cat in a space suit floating in space, highly detailed textures and bright colors.
+- **Image 1** (`docs/img/image1.png`): dimly lit urban alley, wet pavement, muted/dark palette with pops of red and green.  
+- **Image 2** (`docs/img/image2.jpg`): a vibrant orange cat in a space suit floating in space, highly detailed textures and bright colors.
 
 **User prompt (as provided)**
 
