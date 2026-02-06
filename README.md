@@ -39,7 +39,12 @@ The resulting composite is uploaded to the configured S3/MinIO bucket (if `use_s
 
 **Preview (local images)**
 
-![Image 1](docs/img/image1.png) ![Image 2](docs/img/image2.jpg)
+<table>
+  <tr>
+    <td align="center"><img src="docs/img/image1.png" alt="Image 1" width="360"/><br><strong>Image 1</strong></td>
+    <td align="center"><img src="docs/img/image2.jpg" alt="Image 2" width="360"/><br><strong>Image 2</strong></td>
+  </tr>
+</table>
 
 
 **User prompt (as provided)**
