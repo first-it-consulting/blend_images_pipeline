@@ -3,7 +3,7 @@ static
 tmp
 pipelines/__pycache__/
 pipelines/failed/
-pipelines/blend_images_pipeline/valves.json
+pipelines/blend_images_pipeline/
 pipelines/static_server/
 pipelines/static_server/pipelines/
 image_morpher_pipeline/
