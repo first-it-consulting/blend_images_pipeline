@@ -5,7 +5,7 @@ description: Uses Llama 3.2 Vision to extract compact visual traits (JSON) from 
 date: 2026-02-06
 license: MIT
 version: 1.0
-requirements: requests, pydantic, boto3
+requirements: requests, pydantic==2.9.2, boto3
 """
 
 import requests
